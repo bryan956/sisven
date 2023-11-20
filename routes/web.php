@@ -46,23 +46,6 @@ Route::middleware('auth')->group(function () {
     Route::put('/customers/{customer}',[CustomerController::class, 'update'])->name('customers.update');
     Route::get('/customers/{customer}/edit',[CustomerController::class, 'edit'])->name('customers.edit');
 
-    Route::get('/paymodes',[PaymodeController::class, 'index'])->name('paymodes.index');
-    Route::post('/paymodes',[PaymodeController::class, 'store'])->name('paymodes.store');
-    Route::get('/paymodes/create',[PaymodeController::class, 'create'])->name('paymodes.create');
-    Route::delete('/paymodes/{paymode}',[PaymodeController::class, 'destroy'])->name('paymodes.destroy');
-    Route::put('/paymodes/{paymode}',[PaymodeController::class, 'update'])->name('paymodes.update');
-    Route::get('/paymodes/{paymode}/edit',[PaymodeController::class, 'edit'])->name('paymodes.edit');
-
-    
-    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-    Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
-    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
-    Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
-    Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
-    Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
-    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
-
-
     
 });
 
